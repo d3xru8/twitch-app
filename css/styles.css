@@ -1,12 +1,24 @@
 body {
+  background-color: darkcyan;
   margin: 0 auto;
   max-width: 50em;
-}
-.list {
-  display: flex;
-  flex-flow: column nowrap;
+  text-align: center;
 }
 .item {
   align-items: center;
+  background-color: white;
+  border-radius: 50px;
   display: flex;
+  height: 100px;
+  margin: 1em;
 }
+.item:hover {
+  cursor: pointer;
+}
+.logo {
+  border-radius: 50px;
+  box-shadow: 2px 2px 2px 1px gray;
+  height: 100px;
+  width: 100px;
+}
+

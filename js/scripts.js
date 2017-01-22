@@ -9,7 +9,7 @@ $(document).ready(function(){
           window.open("https://www.twitch.tv/" + userdata.name);
         }).append("<img src='" + userdata.logo + "' class='logo' />").append("<div>" + userdata.display_name + "</div>");
       } else {
-        $("<div class='item'></div>").appendTo(".list").append("<div class='error'>" + userdata.error + "</div>").append("<div class='message'>" + userdata.message + "</div>");
+        $("<div class='item'></div>").appendTo(".list").append("<img class='logo' src='images/placeholder.png' />").append("<div class='error'>" + userdata.error + "</div>").append("<div class='message'>" + userdata.message + "</div>");
       }
       var streamdata = stream[2].responseJSON.stream;
       console.log(streamdata);
