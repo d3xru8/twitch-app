@@ -1,0 +1,12 @@
+body {
+  margin: 0 auto;
+  max-width: 50em;
+}
+.list {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.item {
+  align-items: center;
+  display: flex;
+}
