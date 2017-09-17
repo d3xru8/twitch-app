@@ -1,7 +1,7 @@
 $(document).ready(function(){
   var channels = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas", "brunofin"];
   channels.forEach(function(channel){
-    $.when($.getJSON("https://wind-bow.gomix.me/twitch-api/users/" + channel), $.getJSON("https://wind-bow.gomix.me/twitch-api/streams/" + channel)).then(function(user,stream){
+    $.when($.getJSON("https://wind-bow.gomix.me/twitch-api/users/" + channel + "?callback=?"), $.getJSON("https://wind-bow.gomix.me/twitch-api/streams/" + channel + "?callback=?")).then(function(user,stream){
       var userdata = user[2].responseJSON;
       if (!userdata.error) {
         $("<div class='item'></div>").appendTo(".list").click(function(){
