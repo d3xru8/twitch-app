@@ -1,6 +1,5 @@
 $(document).ready(function(){
   var channels = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas", "brunofin"];
-  console.log(channels);
   channels.forEach(function(channel){
     $.when($.getJSON("https://wind-bow.gomix.me/twitch-api/users/" + channel), $.getJSON("https://wind-bow.gomix.me/twitch-api/streams/" + channel)).then(function(user,stream){
       var userdata = user[2].responseJSON;
@@ -20,7 +19,6 @@ $(document).ready(function(){
         $("<div class='game-status'></div>").appendTo(".item:last").click(function(){
           this.closest(".item").remove();
           channels.splice(channels.indexOf(channel,1));
-          console.log(channels);
         }).append("<div class='game error'>" + userdata.error + "</div>").append("<div class='status message'>" + userdata.message + "<br>(Click to remove)</div>");
       }
     });
